@@ -9,8 +9,8 @@ Curso: Desarrollo Web 1S3221 · II Semestre 2026 · Profesor: Giovani Sánchez
 
 | Integrante | Rol principal |
 |---|---|
-| Joel Torres | Página de perfil (`index.html`) |
-| Marc Buchanan | Página de recursos (`recursos.html`) |
+| Marc Buchanan | Página de perfil (`index.html`) |
+| Joel Torres | Página de recursos (`recursos.html`) |
 
 ## Descripción
 
