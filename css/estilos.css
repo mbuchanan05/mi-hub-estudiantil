@@ -1,0 +1,291 @@
+/* ===== Variables principales ===== */
+:root {
+    --color-principal: #f4c430;
+    --color-secundario: #fff4b8;
+    --color-texto: #222222;
+    --color-fondo: #f7f7f7;
+    --color-blanco: #ffffff;
+    --color-enlace: #0b5ed7;
+    --tamano-base: 16px;
+    --tamano-titulo: 32px;
+    --radio: 10px;
+    --espacio: 25px;
+    --fuente: system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
+}
+
+/* ===== Estilos generales ===== */
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: var(--fuente);
+    font-size: var(--tamano-base);
+    line-height: 1.6;
+    color: var(--color-texto);
+    background-color: var(--color-fondo);
+}
+
+img {
+    max-width: 100%;
+}
+
+main {
+    padding: 0 15px;
+}
+
+h2 {
+    margin-top: 0;
+}
+
+/* ===== Clases utilitarias ===== */
+.centrado {
+    text-align: center;
+}
+
+.contenedor {
+    max-width: 800px;
+    margin: 30px auto;
+}
+
+/* ===== Encabezado ===== */
+header {
+    background-color: var(--color-principal);
+    padding: 20px;
+    text-align: center;
+}
+
+header h1 {
+    margin: 0 0 15px;
+    font-size: var(--tamano-titulo);
+}
+
+/* ===== Navegación ===== */
+nav a {
+    color: var(--color-texto);
+    text-decoration: none;
+    font-weight: bold;
+    margin: 0 10px;
+    padding: 6px 12px;
+    border-radius: 6px;
+    transition: background-color 0.2s;
+}
+
+nav a:hover {
+    background-color: var(--color-secundario);
+    text-decoration: underline;
+}
+
+/* ===== Perfil ===== */
+.perfil {
+    max-width: 800px;
+    margin: 30px auto;
+    padding: var(--espacio);
+    background-color: var(--color-blanco);
+    text-align: center;
+    border-radius: var(--radio);
+}
+
+.perfiles-equipo {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+.tarjeta-perfil {
+    flex: 1 1 300px;
+    max-width: 350px;
+    padding: 20px;
+    background-color: var(--color-fondo);
+    border-radius: var(--radio);
+}
+
+.perfil img {
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+.perfil h3 {
+    font-size: 24px;
+    margin: 15px 0 10px;
+}
+
+/* ===== Intereses ===== */
+.intereses {
+    max-width: 800px;
+    margin: 30px auto;
+    padding: var(--espacio);
+    background-color: var(--color-secundario);
+    border-radius: var(--radio);
+}
+
+.intereses ul {
+    margin: 0;
+    padding-left: 25px;
+}
+
+/* ===== Tarjeta de meta ===== */
+.tarjeta-meta {
+    max-width: 800px;
+    margin: 30px auto;
+    padding: var(--espacio);
+    background-color: var(--color-blanco);
+    border: 2px solid var(--color-principal);
+    border-radius: var(--radio);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+}
+
+/* ===== Recursos (tarjetas con enlaces externos) ===== */
+.recursos,
+.estado-materias,
+.contacto {
+    max-width: 800px;
+    margin: 30px auto;
+    padding: var(--espacio);
+    background-color: var(--color-blanco);
+    border-radius: var(--radio);
+}
+
+.lista-recursos {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.tarjeta-recurso {
+    flex: 1 1 200px;
+    padding: 20px;
+    background-color: var(--color-secundario);
+    border: 2px solid var(--color-principal);
+    border-radius: var(--radio);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.tarjeta-recurso:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.tarjeta-recurso h3 {
+    margin-top: 0;
+}
+
+.tarjeta-recurso a {
+    color: var(--color-enlace);
+    font-weight: bold;
+}
+
+.tarjeta-recurso a:hover {
+    text-decoration: none;
+    color: var(--color-texto);
+}
+
+/* ===== Tabla ===== */
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th,
+td {
+    padding: 12px;
+    border: 1px solid #dddddd;
+    text-align: left;
+}
+
+th {
+    background-color: var(--color-principal);
+}
+
+tbody tr:nth-child(even) {
+    background-color: var(--color-fondo);
+}
+
+tbody tr:hover {
+    background-color: var(--color-secundario);
+}
+
+/* ===== Formulario ===== */
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+label {
+    font-weight: bold;
+}
+
+input,
+textarea {
+    width: 100%;
+    padding: 10px;
+    font-family: inherit;
+    font-size: var(--tamano-base);
+    border: 1px solid #aaaaaa;
+    border-radius: 6px;
+}
+
+input:focus,
+textarea:focus {
+    outline: 2px solid var(--color-principal);
+}
+
+button {
+    align-self: flex-start;
+    margin-top: 10px;
+    padding: 10px 20px;
+    font-family: inherit;
+    font-size: var(--tamano-base);
+    font-weight: bold;
+    color: var(--color-texto);
+    background-color: var(--color-principal);
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+button:hover {
+    background-color: var(--color-texto);
+    color: var(--color-blanco);
+}
+
+/* ===== Pie de página ===== */
+footer {
+    margin-top: 40px;
+    padding: 20px;
+    background-color: var(--color-principal);
+    text-align: center;
+}
+
+/* ===== Responsivo ===== */
+@media (max-width: 600px) {
+    .perfiles-equipo,
+    .lista-recursos {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .tarjeta-perfil {
+        max-width: 100%;
+    }
+
+    .perfil,
+    .intereses,
+    .tarjeta-meta,
+    .recursos,
+    .estado-materias,
+    .contacto {
+        padding: 15px;
+    }
+
+    header h1 {
+        font-size: 24px;
+    }
+}
